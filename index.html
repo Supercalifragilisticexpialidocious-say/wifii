@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">A</div>
+                <div>
+                    <div class="brand-name">WiFi Panel</div>
+                    <div class="brand-subtitle">Control center</div>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-item active" data-section="dashboard">Dashboard</button>
+                <button class="nav-item" data-section="users">Users</button>
+                <button class="nav-item" data-section="analytics">Analytics</button>
+                <button class="nav-item" data-section="reports">Reports</button>
+                <button class="nav-item" data-section="settings">Settings</button>
+            </nav>
+            
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h1>WiFi</h1>
+                    <p id="wifi-status" class="topbar-description">N/A</p>
+                </div>
+            </header>
+
+            <section class="page-section active" id="dashboard">
+                <div class="section-grid">
+                    <article class="metric-card">
+                        <div class="metric-label">Device Connected</div>
+                        <div class="metric-value" id="device-count-value">N/A</div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-label">Signal</div>
+                        <div class="metric-value" id="signal-value">N/A</div>
+                        <div class="metric-footer">Wi-Fi strength</div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-label">Status</div>
+                        <div class="metric-value" id="status-value">N/A</div>
+                        <div class="metric-footer">Connection state</div>
+                    </article>
+                </div>
+
+                <div class="content-grid">
+                    <div class="panel card">
+                        <div class="panel-header">
+                            <h2>Connection Info</h2>
+                            <span id="connection-info">Live Wi-Fi details</span>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div>Channel: <strong id="channel-value">N/A</strong></div>
+                            <div>Receive rate: <strong id="receive-rate-value">N/A</strong></div>
+                            <div>Transmit rate: <strong id="transmit-rate-value">N/A</strong></div>
+                            <div>Radio type: <strong id="radio-type-value">N/A</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="panel card">
+                        <div class="panel-header">
+                            <h2>Wi-Fi Health</h2>
+                        </div>
+                        <div class="chart-placeholder" id="health-summary">Signal quality and current health are shown here.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="users">
+                <div class="panel card">
+                    <div class="panel-header">
+                        <h2>Connected Devices</h2>
+                    </div>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr><th>IP Address</th><th>MAC Address</th><th>Source</th></tr>
+                            </thead>
+                            <tbody id="users-table-body">
+                                <tr><td colspan="3">No devices discovered yet.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="analytics">
+                <div class="section-grid">
+                    <article class="metric-card">
+                        <div class="metric-label">Connected Devices</div>
+                        <div class="metric-value" id="client-count-value">N/A</div>
+                        <div class="metric-footer">Discovered on network</div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-label">Signal Quality</div>
+                        <div class="metric-value" id="signal-quality-value">N/A</div>
+                        <div class="metric-footer">Estimated health</div>
+                    </article>
+                    <article class="metric-card">
+                        <div class="metric-label">Last Updated</div>
+                        <div class="metric-value" id="last-refresh-value">N/A</div>
+                        <div class="metric-footer">Live refresh</div>
+                    </article>
+                </div>
+                <div class="content-grid content-grid--wide">
+                    <div class="panel card">
+                        <div class="panel-header"><h2>Network Analytics</h2></div>
+                        <div class="chart-placeholder" id="analytics-detail">Wi-Fi analytics will update here as your connection refreshes.</div>
+                    </div>
+                    <div class="panel card">
+                        <div class="panel-header"><h2>Signal Strength Trend</h2></div>
+                        <div class="chart-placeholder" id="analytics-trend">Signal trend will appear here.</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="reports">
+                <div class="content-grid content-grid--wide">
+                    <div class="panel card">
+                        <div class="panel-header"><h2>Reports Center</h2></div>
+                        <div class="report-cards">
+                            <div class="report-card">Domain Reports</div>
+                            <div class="report-card">Payment Reports</div>
+                            <div class="report-card">WiFi Health Reports</div>
+                            <div class="report-card">Device Reports</div>
+                        </div>
+                    </div>
+                    <div class="panel card">
+                        <div class="panel-header"><h2>Generate Report</h2></div>
+                        <div class="form-grid">
+                            <label>Report Type<select><option>Monthly</option><option>Weekly</option></select></label>
+                            <label>Date Range<select><option>Last 30 days</option><option>Q4 2025</option></select></label>
+                            <label>Format<select><option>PDF</option><option>Excel</option></select></label>
+                            <button class="primary-button">Generate Report</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page-section" id="settings">
+                <div class="panel card">
+                    <div class="panel-header"><h2>Design & Theme Settings</h2></div>
+                    <div class="settings-grid">
+                        <div class="setting-group">
+                            <label>Theme Mode</label>
+                            <button class="small-button">Dark</button>
+                            <button class="small-button">Light</button>
+                        </div>
+                        <div class="setting-group">
+                            <label>Primary Color</label>
+                            <div class="color-palette">
+                                <span class="color-swatch" style="background:#6366f1"></span>
+                                <span class="color-swatch" style="background:#14b8a6"></span>
+                                <span class="color-swatch" style="background:#fb923c"></span>
+                            </div>
+                        </div>
+                        <div class="setting-group">
+                            <label>Font Size</label>
+                            <select><option>Default</option><option>Large</option></select>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="right-panel">
+            <div class="panel card summary-card">
+                <h2>Wi-Fi Summary</h2>
+                <div class="summary-item"><span>Network</span><strong id="summary-network">N/A</strong></div>
+                <div class="summary-item"><span>Signal</span><strong id="summary-signal">N/A</strong></div>
+                <div class="summary-item"><span>Clients</span><strong id="summary-clients">N/A</strong></div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
