@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ewan ko sayo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="floating-hearts"></div>
+
+<div id="snoopy-bg"></div>
+
+<canvas id="thread-canvas"></canvas>
+
+<section class="screen" id="name-screen">
+  <div class="ns-hearts"><img src="https://scontent.fmnl4-3.fna.fbcdn.net/v/t1.15752-9/758599508_1697342238200604_3163715214582576406_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=102&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeFKG68BIKG2mXG4sBRjQc00swvFNiBYSb-zC8U2IFhJvy-7X5_jfILDs5eB5L_hnB-oA-Yhnucg9XAjChbr0QZw&_nc_ohc=5uE-yy3Ts3wQ7kNvwENjRod&_nc_oc=AdrfGcVSscAX2p580RaWDGF9PKQaXe24v_f-o-w51-3Xwh_CMyPI2BSJKRnl-BWW0B-Tw69T-OgaNGQTXMG0gp92&_nc_zt=23&_nc_ht=scontent.fmnl4-3.fna&_nc_ss=7b2a8&oh=03_Q7cD5wGhzFgHzZxuhbMd0BdddQ8uK9iN2rs5dFB0nFtQsIlzKg&oe=6A8D8060" alt="Heart" /></div>
+  <h1 class="ns-title">May something ako<br>gustong sabihin sa 'yo</h1>
+  <p class="ns-sub">Before you read this... sino ka ba?</p>
+  <div class="ns-card">
+    <p class="ns-label">Enter Your Name</p>
+    <div class="face-emoji"><img src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.15752-9/742110577_2237710513708593_1010755707364317114_n.jpg?_nc_cat=101&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeExJmnQOOe_2CFauU6tF9ThWfzlxTDUWy5Z_OXFMNRbLn9c4zDS-PfCGjweH10iur_TyrFLQWhCdXUKWDUItC5K&_nc_ohc=lkm52H6ZVtsQ7kNvwGtH-RC&_nc_oc=Adqdr8LAdCj27W20HnrqYunLMZzXiHLqI3cB_M6I_JL1eow53EMmwpxAsYFhcFFkDW1tsiWj-itp9cLoJqYPyGek&_nc_zt=23&_nc_ht=scontent.fmnl4-6.fna&_nc_ss=7b2a8&oh=03_Q7cD5wEPEN1-YMmrhMWMzgSh4cIMN74s3NamhBYDEE9FWIrfdg&oe=6A8D7309" alt="Snoopy" /></div>
+    <input id="name-input" type="text" placeholder="Your name here" maxlength="30" autocomplete="off" />
+    <button id="submit-btn">Submit</button>
+  </div>
+</section>
+
+<section class="screen hidden" id="letter-screen">
+  <div class="letter-wrap">
+    <div class="paper" id="paper">
+      <div class="pin"></div>
+
+      <div class="greeting" id="greeting"></div>
+
+      <div id="lines-container"></div>
+
+      <div class="snoopy-deco">
+        <svg width="140" height="130" viewBox="0 0 140 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="62" cy="22" rx="24" ry="22" fill="#222"/>
+          <ellipse cx="43" cy="32" rx="10" ry="16" fill="#c8845a" stroke="#222" stroke-width="2.5" transform="rotate(-10,43,32)"/>
+          <ellipse cx="78" cy="36" rx="9" ry="14" fill="#c8845a" stroke="#222" stroke-width="2.5" transform="rotate(15,78,36)"/>
+          <ellipse cx="72" cy="26" rx="8" ry="5" fill="#c8845a" stroke="#222" stroke-width="2"/>
+          <circle cx="71" cy="25" r="2.5" fill="#222"/>
+          <circle cx="55" cy="17" r="3" fill="#222"/>
+          <circle cx="56" cy="16" r="1" fill="white"/>
+          <path d="M58 30 Q65 36 72 30" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="40" cy="70" rx="38" ry="18" fill="white" stroke="#222" stroke-width="3"/>
+          <path d="M78 60 Q100 50 95 43 Q90 36 100 32" stroke="#222" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="12" cy="80" rx="12" ry="7" fill="white" stroke="#222" stroke-width="2.5"/>
+        </svg>
+      </div>
+    </div>
+    <p class="scroll-nudge">↓ scroll to read ↓</p>
+    <button id="return-btn" class="return-btn hidden">Return Home</button>
+  </div>
+</section>
+<script id="ahhhhhhhhhh-script" type="text/javascript" src="script.js"></script>
+</body>
+</html>
